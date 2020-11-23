@@ -49,5 +49,5 @@
     "react-test-renderer": "15.6.1",
     "webpack-dev-server": "2.5.1"
   },
-  "repository": "git@github.com:andrewjmead/react-course-2-expensify-app.git"
+  "repository": "git@github.com:benenshannon/expensify-app2.git"
 }
