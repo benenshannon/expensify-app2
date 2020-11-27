@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import selectExpenses from '../selectors/expenses';
 import numeral from 'numeral';
 
+
+
 const ExpenseSummary = (props) => (
     //props can be destructured to just get expenseCount & expenseTotal
     //above
@@ -23,7 +25,7 @@ const ExpenseSummary = (props) => (
         }
     </div>
     );
-
+// this is how Udemy created the code
 export const ExpenseSummaryTest = ({ expenseCount, expensesTotal}) => {
     const expenseWord = expenseCount === 1 ? 'expense' : 'expenses';
     const formattedExpensesTotal = numeral(expensesTotal / 100).format('$0,0.00');
@@ -46,6 +48,8 @@ const mapStateToProps = (state) => {
 
 //HOC
 export default connect(mapStateToProps)(ExpenseSummary);
+//we are creating a new component by connecting ExpensesSummary
+//and getting values from mapStateToProps (stae)
 
 //(expenses
 //    .map((expense) => expense.amount)

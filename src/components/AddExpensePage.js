@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 //adding connect so that the expenseform can be submitted to the store
 import ExpenseForm from './ExpenseForm';
 //ExpenseForm is a class
-import { addExpense } from '../actions/expenses';
+import { startAddExpense } from '../actions/expenses';
 //this imports addExpense from the actions folder with all the properties
 //(description, amount, createdAt etc)
 
 export class AddExpensePage extends React.Component {
   onSubmit = (expense) => {
-    this.props.addExpense(expense);
+    this.props.startAddExpense(expense);
     this.props.history.push('/');
   };
   render() {
@@ -43,7 +43,7 @@ export class AddExpensePage extends React.Component {
 //);
 
 const mapDispatchToProps = (dispatch) => ({
-  addExpense: (expense) => dispatch(addExpense(expense))
+  startAddExpense: (expense) => dispatch(startAddExpense(expense))
 });
 
 export default connect(undefined, mapDispatchToProps)(AddExpensePage);

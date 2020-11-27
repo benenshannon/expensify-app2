@@ -1,2 +1,7 @@
 node_modules/
 public/dist/
+.env.test
+.env.development
+
+#these are files that are either big (nod modules) so dont need to be
+#uploaded to git, or are secret (such as test/development firebase files)

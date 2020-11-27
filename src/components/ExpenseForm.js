@@ -7,7 +7,7 @@ import { SingleDatePicker } from 'react-dates';
 // using date elements example: console.log(new Date().getFullYear()+1);
 //moment is the standard approach, easier than date
 const now = moment();
-console.log(now.format('MMM Do, YYYY',));
+//console.log(now.format('MMM Do, YYYY',));
 
 export default class ExpenseFrom extends React.Component {
     constructor(props) {

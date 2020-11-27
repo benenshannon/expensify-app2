@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\a0689448\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add enzyme-to-json@3.0.0
+  C:\Program Files\nodejs\node.exe C:\Users\a0689448\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add firebase@4.2.0
 
 PATH: 
-  C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Java\jre7\bin;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files (x86)\WebEx\Productivity Tools;C:\Program Files (x86)\Webex\Webex\Applications;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;;C:\Users\a0689448\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\a0689448\AppData\Roaming\npm;C:\Program Files\heroku\bin
+  C:\Users\a0689448\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\a0689448\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Java\jre7\bin;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn;C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn;C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn;C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio;C:\Program Files\Microsoft SQL Server\110\Tools\Binn;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit;C:\Program Files (x86)\WebEx\Productivity Tools;C:\Program Files (x86)\Webex\Webex\Applications;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Users\a0689448\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\a0689448\AppData\Roaming\npm;C:\Program Files\heroku\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
 
 Yarn version: 
   1.22.4
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'C:\Users\a0689448\Documents\Aon\Javascript\Udemy\react-course-projects\expensify-app\node_modules\acorn-dynamic-import\node_modules\.bin'
+  Error: EPERM: operation not permitted, unlink 'C:\Users\a0689448\Documents\Aon\Javascript\Udemy\react-course-projects\expensify-app\node_modules\acorn-globals\node_modules\.bin'
 
 npm manifest: 
   {
@@ -40,6 +40,7 @@ npm manifest:
       "babel-preset-env": "1.5.2",
       "babel-preset-react": "6.24.1",
       "css-loader": "0.28.4",
+      "enzyme-adapter-react-16": "1.0.0",
       "express": "4.15.4",
       "extract-text-webpack-plugin": "3.0.0",
       "live-server": "^1.2.1",
@@ -64,10 +65,10 @@ npm manifest:
     },
     "devDependencies": {
       "enzyme": "3.0.0",
-      "enzyme-to-json": "1.5.1",
       "enzyme-adapter-react-16": "1.0.0",
+      "enzyme-to-json": "3.0.0",
       "jest": "20.0.4",
-      "react-test-renderer": "15.6.1",
+      "react-test-renderer": "16.0.0",
       "webpack-dev-server": "2.5.1"
     },
     "repository": "git@github.com:benenshannon/expensify-app2.git"
@@ -2223,17 +2224,12 @@ Lockfile:
       prop-types "^15.7.2"
       semver "^5.7.1"
   
-  enzyme-to-json@1.5.1:
-    version "1.5.1"
-    resolved "https://registry.yarnpkg.com/enzyme-to-json/-/enzyme-to-json-1.5.1.tgz#e34f4d126bb3f4696ce3800b51f9ed83df708799"
+  enzyme-to-json@3.0.0:
+    version "3.0.0"
+    resolved "https://registry.yarnpkg.com/enzyme-to-json/-/enzyme-to-json-3.0.0.tgz#1bc6a7e701c072c5db1aaf99af76ed2c6f5d55b2"
+    integrity sha512-t3DG2ggq0ttLaHO4eNH58KO94Nzg6bqVjGxJpv+kayDjy5q0VGQWTORDQkhHU+YctSVgWxokefxb7o/lx6Cr2A==
     dependencies:
-      lodash.filter "^4.6.0"
-      lodash.isnil "^4.0.0"
-      lodash.isplainobject "^4.0.6"
-      lodash.omitby "^4.5.0"
-      lodash.range "^3.2.0"
-      object-values "^1.0.0"
-      object.entries "^1.0.3"
+      lodash "^4.17.4"
   
   enzyme@3.0.0:
     version "3.0.0"
@@ -4204,34 +4200,14 @@ Lockfile:
     version "4.3.0"
     resolved "https://registry.yarnpkg.com/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
   
-  lodash.filter@^4.6.0:
-    version "4.6.0"
-    resolved "https://registry.yarnpkg.com/lodash.filter/-/lodash.filter-4.6.0.tgz#668b1d4981603ae1cc5a6fa760143e480b4c4ace"
-  
   lodash.flattendeep@^4.4.0:
     version "4.4.0"
     resolved "https://registry.yarnpkg.com/lodash.flattendeep/-/lodash.flattendeep-4.4.0.tgz#fb030917f86a3134e5bc9bec0d69e0013ddfedb2"
     integrity sha1-+wMJF/hqMTTlvJvsDWngAT3f7bI=
   
-  lodash.isnil@^4.0.0:
-    version "4.0.0"
-    resolved "https://registry.yarnpkg.com/lodash.isnil/-/lodash.isnil-4.0.0.tgz#49e28cd559013458c814c5479d3c663a21bfaa6c"
-  
-  lodash.isplainobject@^4.0.6:
-    version "4.0.6"
-    resolved "https://registry.yarnpkg.com/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz#7c526a52d89b45c45cc690b88163be0497f550cb"
-  
   lodash.memoize@^4.1.2:
     version "4.1.2"
     resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
-  
-  lodash.omitby@^4.5.0:
-    version "4.6.0"
-    resolved "https://registry.yarnpkg.com/lodash.omitby/-/lodash.omitby-4.6.0.tgz#5c15ff4754ad555016b53c041311e8f079204791"
-  
-  lodash.range@^3.2.0:
-    version "3.2.0"
-    resolved "https://registry.yarnpkg.com/lodash.range/-/lodash.range-3.2.0.tgz#f461e588f66683f7eadeade513e38a69a565a15d"
   
   lodash.tail@^4.1.1:
     version "4.1.1"
@@ -4805,10 +4781,6 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-1.1.1.tgz#1c47f272df277f3b1daf061677d9c82e2322c60e"
     integrity sha512-NuAESUOUMrlIXOfHKzD6bpPu3tYt3xvjNdRIQ+FeT0lNb4K8WR70CaDxhuNguS2XG+GjkyMwOzsN5ZktImfhLA==
   
-  object-values@^1.0.0:
-    version "1.0.0"
-    resolved "https://registry.yarnpkg.com/object-values/-/object-values-1.0.0.tgz#72af839630119e5b98c3b02bb8c27e3237158105"
-  
   object-visit@^1.0.0:
     version "1.0.1"
     resolved "https://registry.yarnpkg.com/object-visit/-/object-visit-1.0.1.tgz#f79c4493af0c5377b59fe39d395e41042dd045bb"
@@ -4834,7 +4806,7 @@ Lockfile:
       has-symbols "^1.0.1"
       object-keys "^1.1.1"
   
-  object.entries@^1.0.3, object.entries@^1.0.4:
+  object.entries@^1.0.4:
     version "1.0.4"
     resolved "https://registry.yarnpkg.com/object.entries/-/object.entries-1.0.4.tgz#1bf9a4dd2288f5b33f3a993d257661f05d161a5f"
     dependencies:
@@ -5740,12 +5712,13 @@ Lockfile:
       prop-types "^15.6.1"
       warning "^4.0.1"
   
-  react-test-renderer@15.6.1:
-    version "15.6.1"
-    resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-15.6.1.tgz#026f4a5bb5552661fd2cc4bbcd0d4bc8a35ebf7e"
+  react-test-renderer@16.0.0:
+    version "16.0.0"
+    resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-16.0.0.tgz#9fe7b8308f2f71f29fc356d4102086f131c9cb15"
+    integrity sha1-n+e4MI8vcfKfw1bUECCG8THJyxU=
     dependencies:
-      fbjs "^0.8.9"
-      object-assign "^4.1.0"
+      fbjs "^0.8.16"
+      object-assign "^4.1.1"
   
   react@16.0.0:
     version "16.0.0"
