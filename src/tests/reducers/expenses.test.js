@@ -32,7 +32,7 @@ test('should add expense', () => {
     const action = {
         type: 'ADD_EXPENSE',
         expense:{
-            id: '100',
+            id: '100', 
             description: 'new addition',
             note: 'adding a note too',
             amount: 999999,
@@ -62,4 +62,15 @@ test('should not edit expense if id doesnt exist', () => {
     }
     const state = expensesReducer(expenses, action);
     expect(state).toEqual(expenses);
+});
+
+test('should set expenses', () => {
+    const action = {
+        type: 'SET_EXPENSES',
+        expenses: [expenses[1]]
+    };
+    // call the reducer, calling the expenses and the relevant action
+    // (which in this case is SET_EXPENSES)
+    const state = expensesReducer(expenses, action);
+    expect(state).toEqual([expenses[1]]);
 });

@@ -44,3 +44,29 @@ export const editExpense = (id, updates) => ({
     id,
     updates
 });
+
+// manipulate the redux store
+//SET_EXPENSES
+export const setExpenses = (expenses) => ({
+    type: 'SET_EXPENSES',
+    expenses
+});
+
+//THIS WILL ACTUALLY FETCH THE DATA
+//export const startSetExpenses;
+export const startSetExpenses = () => {
+    return (dispatch) => {
+        return database.ref('expenses').once('value').then((snapshot) => {
+            const expenses = [];
+
+            snapshot.forEach((childSnapshot) => {
+                expenses.push({
+                    id: childSnapshot.key,
+                    ...childSnapshot.val()
+                });
+            });
+
+            dispatch(setExpenses(expenses));
+        });
+    };
+};
