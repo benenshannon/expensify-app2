@@ -1,38 +1,92 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render expense list with empty message 1`] = `
-<div>
-  <p>
-    No expenses
-  </p>
+<div
+  className="content-container"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-for-mobile"
+    >
+      Expenses
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Expense
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Amount
+    </div>
+  </div>
+  <div
+    className="list-body"
+  >
+    <div
+      className="list-item list-item--message"
+    >
+      <span>
+        No expenses
+      </span>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`should render expense list with expenses 1`] = `
-<div>
-  <ExpenseListItem
-    amount={189500}
-    createdAt={0}
-    description="rent"
-    id="1"
-    key="1"
-    note="this was the old rent"
-  />
-  <ExpenseListItem
-    amount={230000}
-    createdAt={-345600000}
-    description="mortgage"
-    id="2"
-    key="2"
-    note="this was the first mortgage"
-  />
-  <ExpenseListItem
-    amount={250000}
-    createdAt={345600000}
-    description="new mortgage"
-    id="3"
-    key="3"
-    note="this was the new mortgage payment"
-  />
+<div
+  className="content-container"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-for-mobile"
+    >
+      Expenses
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Expense
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Amount
+    </div>
+  </div>
+  <div
+    className="list-body"
+  >
+    <ExpenseListItem
+      amount={189500}
+      createdAt={0}
+      description="rent"
+      id="1"
+      key="1"
+      note="this was the old rent"
+    />
+    <ExpenseListItem
+      amount={230000}
+      createdAt={-345600000}
+      description="mortgage"
+      id="2"
+      key="2"
+      note="this was the first mortgage"
+    />
+    <ExpenseListItem
+      amount={250000}
+      createdAt={345600000}
+      description="new mortgage"
+      id="3"
+      key="3"
+      note="this was the new mortgage payment"
+    />
+  </div>
 </div>
 `;

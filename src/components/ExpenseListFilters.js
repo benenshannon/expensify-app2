@@ -38,38 +38,49 @@ export class ExpenseListFilters extends React.Component {
 
     render() {
         return (
-            <div>
-            <input 
-            type="text" 
-            value = {this.props.filters.text} 
-                onChange={this.onTextChange}
+            <div className="content-container">
+            <div className="input-group">
+              <div className="input-group__item">
+                 <input 
+                 className="text-input"
+                 type="text" 
+                 placeholder="Search expenses"
+                 value = {this.props.filters.text} 
+                 onChange={this.onTextChange}
                 /> 
-            <select
-            //inside the <select> command is where we identify the 'value' item
-            //this value is then called in the <option> code
-            //props.filters (and props.expenses) - this is calling the export from
-            //.reducers/filters.js, as props calls the original store (configureStore)
-               value={this.props.filters.sortBy}
-               onChange={this.onSortChange}      
-               >
-              <option value ="amount">Amount</option>
-              <option value ="date">Date</option>
-            </select>
-            <DateRangePicker
-            //startDate gets it's value off the filters object (this is the 
-            //filters file in the reducers folder, imported into 
-            //configureStore and then called using import {connect})
-              startDate={this.props.filters.startDate}
-              endDate={this.props.filters.endDate}
-              //on dates change doesnt exist anywhere (hence no this.props
-              //so it gets created in the class, above)
-              onDatesChange={this.onDatesChange}
-              focusedInput={this.state.calendarFocused}
-              onFocusChange={this.onFocusChange}
-              numberOfMonths = {1}
-              isOutsideRange={() => false}
-              showClearDates={true}
-            />
+              </div>
+              <div className="input-group__item">
+                 <select
+                 className="select"
+                 //inside the <select> command is where we identify the 'value' item
+                 //this value is then called in the <option> code
+                 //props.filters (and props.expenses) - this is calling the export from
+                 //.reducers/filters.js, as props calls the original store (configureStore)
+                 value={this.props.filters.sortBy}
+                 onChange={this.onSortChange}      
+                 >
+                 <option value ="amount">Amount</option>
+                 <option value ="date">Date</option>
+                 </select>  
+              </div>
+              <div className="input-group__item">
+                 <DateRangePicker
+                 //startDate gets it's value off the filters object (this is the 
+                 //filters file in the reducers folder, imported into 
+                 //configureStore and then called using import {connect})
+                 startDate={this.props.filters.startDate}
+                 endDate={this.props.filters.endDate}
+                 //on dates change doesnt exist anywhere (hence no this.props
+                 //so it gets created in the class, above)
+                 onDatesChange={this.onDatesChange}
+                 focusedInput={this.state.calendarFocused}
+                 onFocusChange={this.onFocusChange}
+                 numberOfMonths = {1}
+                 isOutsideRange={() => false}
+                 showClearDates={true}
+                 /> 
+              </div>
+            </div>         
             </div>
         );
     };

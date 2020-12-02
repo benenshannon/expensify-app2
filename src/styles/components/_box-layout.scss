@@ -1,0 +1,28 @@
+ .box-layout {
+     background: url('/images/128131965.jpg');
+     background-size: cover;
+     display: flex;
+     height: 100vh;
+     //vh = viewport height, and is in percent
+     justify-content: center;
+     align-items: center;
+     width: 100vw;
+     //vw = viewport width
+ }
+
+ .box-layout__box {
+     //background and transparency
+     background: fade-out(white, 0.15);
+     //border radius - whether it has any curved edges / slight border
+     border-radius: 4px;
+     margin: 0 0 $m-size 0;
+     padding: $l-size $m-size;
+     text-align: center;
+     //width of the box
+     width: 25rem;
+ }
+
+.box-layout__title {
+    margin: 0 0 $m-size 0;
+    line-height: 1;
+}

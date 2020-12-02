@@ -1,0 +1,22 @@
+.button {
+    //background and transparency
+    background: $dark-blue;
+    color: white;
+        //border radius - whether it has any curved edges / slight border
+    border: none;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 1;
+    padding: $s-size $s-size;
+    font-weight: 200;
+    font-size: $font-size-large;
+}
+
+.button--link {
+    background: none;
+    }
+
+.button-remove {
+    @extend .button;
+    background: $dark-orange;
+}

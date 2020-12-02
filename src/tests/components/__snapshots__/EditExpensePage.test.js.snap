@@ -2,22 +2,40 @@
 
 exports[`should render EditExpensePage 1`] = `
 <div>
-  <ExpenseFrom
-    expense={
-      Object {
-        "amount": 250000,
-        "createdAt": 345600000,
-        "description": "new mortgage",
-        "id": "3",
-        "note": "this was the new mortgage payment",
-      }
-    }
-    onSubmit={[Function]}
-  />
-  <button
-    onClick={[Function]}
+  <div
+    className="page-header"
   >
-    Remove
-  </button>
+    <div
+      className="content-container"
+    >
+      <h1
+        className="page-header__title"
+      >
+        Edit Expense
+      </h1>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <ExpenseFrom
+      expense={
+        Object {
+          "amount": 250000,
+          "createdAt": 345600000,
+          "description": "new mortgage",
+          "id": "3",
+          "note": "this was the new mortgage payment",
+        }
+      }
+      onSubmit={[Function]}
+    />
+    <button
+      className="button-remove"
+      onClick={[Function]}
+    >
+      Remove expense
+    </button>
+  </div>
 </div>
 `;
